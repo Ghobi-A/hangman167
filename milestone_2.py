@@ -9,13 +9,20 @@ print("Word List:", word_list)
 # Assigning a randomly selected word from the list to a variable called "word"
 word = random.choice(word_list)
 
-# Print the randomly selected word
+# Print the randomly selected word 
 print("Randomly selected word:", word)
 
-# Taking user input
-guess = input("Enter a single letter: ")
+while True:
+    # Taking user input
+    guess = input("Enter a single letter: ")
 
-# Validating user input
+    if len(guess) == 1 and guess.isalpha():
+        print("Good guess!")
+        break  
+    else:
+        print("Oops! That is not a valid input.")
+
+# Continue with the rest of your code to check if the guessed letter is in the word.
 if len(guess) == 1 and guess.isalpha():
     if guess in word:
         print("The guess is correct! The letter '{}' is in the word.".format(guess))
