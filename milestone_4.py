@@ -44,6 +44,6 @@ class Hangman:
             print("Game over. The word was:", self.word)
 
 
-word_list = ["hangman", "python", "programming", "challenge"]
+word_list = ['apple', 'banana', 'orange', 'grape']
 game = Hangman(word_list)
 game.play_game()
